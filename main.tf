@@ -1,5 +1,5 @@
 resource "google_container_cluster" "container_cluster" {
-  location = "africa-south1"
+  location = "us-east1"
 }
 
 resource "google_container_node_pool" "container_node_pool" {
