@@ -1,16 +1,21 @@
 resource "google_container_cluster" "container_cluster" {
+  name = "demo_cluster"
   location = "us-east1"
+  
 }
 
 resource "google_container_node_pool" "container_node_pool" {
-  location = "africa-south1"
+  cluster = google_container_cluster.container_cluster
+  location = "us-east1"
 }
 
 resource "google_container_node_pool" "container_node_pool2" {
-  location = "us-west1"
+  cluster = google_container_cluster.container_cluster
+  location = "us-east1"
 }
 
 resource "google_container_node_pool" "container_node_pool3" {
-  location = "africa-south1"
+  cluster = google_container_cluster.container_cluster
+  location = "us-east1"
 }
 
